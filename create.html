@@ -1,0 +1,222 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.942);;
+        }
+        h2{
+            color: white;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color:black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: rgba(68, 67, 67, 0.274) ;
+        }
+        .error-message {
+            color: red;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Create account</h2>
+        <form id="loginForm" action="/create" method="post">
+            <input type="text" id="username" placeholder="Username" name="username">
+            <input type="password" id="password" placeholder="Password" name="password">
+            <input type="submit" value="Create" onclick="subm()">
+        </form>
+
+    </div>
+
+    <script>
+        function subm(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+
+            if (username.trim() === "") {
+                displayError("Please enter your username.");
+            }  if (password.trim() === "") {
+                displayError("Please enter your password.");
+            } 
+        };
+
+        function displayError(message) {
+            document.getElementById("errorMessage").innerText = message;
+        }
+    </script>
+</body>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" >
+    <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Cut|Nova+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style_index.css">
+<link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+  
+  
+  <nav>
+    <div class="logo">
+      <h3><a href="/home" class="logo-name">Kapda Fashion</a></h3>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/shop">Products</a></li>
+      <li><a href="/contact">ContactUs</a></li>
+      <li><a href="/login" id="login">Login</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+
+<br><br><br><br><br><br>
+<div class="container" style="padding-left: 40%;">
+    <h2 style="color: #e85a48;">Create account</h2><br>
+    <form id="loginForm" action="/create" method="post">
+        <input type="text" id="username" placeholder="Username" name="username"><br><br>
+        <input type="password" id="password" placeholder="Password" name="password"><br><br>
+        <input type="submit" value="Create" onclick="subm()">
+    </form>
+
+</div>
+
+<script>
+    function subm(event) {
+        event.preventDefault();
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+
+        if (username.trim() === "") {
+            displayError("Please enter your username.");
+        }  if (password.trim() === "") {
+            displayError("Please enter your password.");
+        } 
+    };
+
+    function displayError(message) {
+        document.getElementById("errorMessage").innerText = message;
+    }
+</script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" >
+    <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Cut|Nova+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+</head>
+<body>
+  
+  <nav>
+    <div class="logo">
+      <h3><a href="/home" class="logo-name">Kapda Fashion</a></h3>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/shop">Products</a></li>
+      <li><a href="/contact">ContactUs</a></li>
+      <li><a href="/login" id="login">Login</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+
+<br><br><br><br><br><br>
+<div class="container" style="padding-left: 30%;">
+    <h2 style="color: #e85a48;">Create account</h2><br>
+    <div ng-app="createAccountApp">
+        <form id="loginForm" name="loginForm" ng-submit="submitForm()" action="/create" method="post">
+            <input type="text" id="username" placeholder="Username" name="username" ng-model="user.username" required minlength="7">
+            <span ng-show="loginForm.username.$error.minlength">Username must be at least 7 characters long.</span><br><br>
+            <input type="password" id="password" placeholder="Password" name="password" ng-model="user.password" required ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{8,}$/">
+            <span ng-show="loginForm.password.$error.pattern">Password must be at least 8 characters long and include 1 uppercase letter,1 number and 1 special character.</span><br><br>
+            <div ng-show="showError">Invalid username or password.</div>
+            <input type="submit" value="Create" ng-disabled="loginForm.$invalid">
+        </form>
+    </div>
+
+</div>
+
+<script>
+var app = angular.module('createAccountApp', []);
+app.controller('createAccountCtrl', function($scope) {
+  $scope.user = {};
+  $scope.showError = false;
+
+  $scope.submitForm = function() {
+    if ($scope.loginForm.$valid) {
+      // Submit the form using AJAX or other methods
+      console.log('Form submitted:', $scope.user);
+    } else {
+      $scope.showError = true;
+    }
+  };
+});
+</script>
+</body>
+</html>
+

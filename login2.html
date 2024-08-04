@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</head>
+<body style="background-color: #ffffff ;">
+    <!-- navbar -->
+    <nav>
+      <div class="logo">
+        <h3><a href="index.html" class="logo-name">Kapda Fashion</a></h3>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/shop">Products</a></li>
+        <li><a href="/contact">ContactUs</a></li>
+        <li><a href="/login" id="login">Login</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  <!-- navbar --> 
+
+    <!--<div class="login">
+      <img src="images/login-images/login.png" alt="">
+      <div class="vl"></div>
+      <img src="images/login-images/undraw_empty_cart_co35.png" class="login-image" alt="">
+    </div>-->
+    <br><br><br><br><br>
+    
+    <center>LOGIN HERE</center> 
+    
+
+   
+
+    <div class="container">
+      <form id="loginForm" action="/auth" method="post" >
+          <input type="text" id="username" placeholder="Username" name="username"><br><br>
+          <input type="password" id="password" placeholder="Password" name="password"><br><br>
+          <input type="submit" style="margin-left: 7%;" value="Login" onclick="subm()">
+      </form>
+    </div>
+    <br>
+      <div id="errorMessage" style="padding-left: 25%;" ></div>
+      <br>
+      <h3 style="padding-left: 45%;"><a href="/create">Create an account</a></h3>
+  
+
+  <script>
+  
+
+
+  $(document).ready(function() {
+    $('#loginForm').submit(function(event) {
+      event.preventDefault();
+
+      var username = $('#username').val();
+      var password = $('#password').val();
+
+      // Regular expressions for validation
+      var usernameRegex = /^[a-zA-Z0-9_]{7,}$/;
+      var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+      // Validate username
+      if (!usernameRegex.test(username.trim())) {
+        displayError("Username must be at least 7 characters long and can contain letters, numbers, and underscore.");
+        return;
+      }
+
+      // Validate password
+      if (!passwordRegex.test(password.trim())) {
+        displayError("Password must be at least 8 characters long and contain at least one uppercase letter,one numeric digit, and one special character.");
+        return;
+      }
+
+      // If validation passes, submit the form
+      this.submit();
+    });
+
+    function displayError(message) {
+      $('#errorMessage').text(message);
+    }
+  });
+
+
+
+
+  </script>
+
+
+
+    <hr>
+    <br>
+
+    <h4 class="other-login-op">Or login with</h4>
+    <br>
+    
+    <div class="social">
+      <a href="https://google.com"><img src="images/icons/icon-google.png" class="other-login-op-img" height="33" width="30"alt=""></a>&nbsp;&nbsp;
+      <a href="https://facebook.com"><img src="images/icons/fb.png" class="other-login-op-img" height="30" width="35" alt=""></a>&nbsp;&nbsp;
+      <a href="https://google.com"><img src="images/icons/favicon.jpg" class="other-login-op-img" height="32" width="35"alt=""></a>
+    </div>
+
+  <script type="text/javascript" src="js/nav.js"></script>
+
+ 
+</body>
+</html>
